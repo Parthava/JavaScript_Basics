@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Functions</title>
+</head>
+<body>
+	<h2 id="col">This is the default color Black</h2>
+	<button onclick="color1()">Red</button>
+	<button onclick="color2()">Blue</button>
+	<button onclick="color3()">Default</button><br/><br/>
+
+	Color: <input type="text" name="color" id="color"> 
+	<button onclick="newcol()">Submit</button>
+
+
+	<script type="text/javascript">
+		
+		function color1()
+		{
+			document.getElementById("col").innerHTML = "Now the color changes to Red";
+			document.getElementById("col").style.color = "Red";
+		}
+
+		function color2()
+		{
+			document.getElementById("col").innerHTML = "Now the color changes to Blue";
+			document.getElementById("col").style.color = "Blue";
+		}
+
+		function color3()
+		{
+			document.getElementById("col").innerHTML = "Now the color changes to default Black";
+			document.getElementById("col").style.color = "Black";
+		}
+
+		//---------------------------------------------------------------------------------------
+
+		function newcol()
+		{
+			if(document.getElementById("color").value==="Red") // takes the id from input and checks the condition
+			{
+				document.getElementById("col").innerHTML = "Now the color changes to Red";
+				document.getElementById("col").style.color = "Red";
+			}
+			else if(document.getElementById("color").value==="")
+			{
+				document.getElementById("col").innerHTML = "Enter a valid color to change";
+			}
+			else
+			{
+				var reqcol = document.getElementById("color").value;
+				document.getElementById("col").innerHTML = "Oops!! unable to change to color " + reqcol;
+			}
+		}
+		
+
+	</script>
+</body>
+</html>

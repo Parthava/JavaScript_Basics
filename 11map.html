@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Map</title>
+</head>
+<body>
+	<h2>Map</h2>
+	<h4>Switch console to see output</h4>
+	<script type="text/javascript">
+		
+		var mp = new Map([
+			["id1",101],
+			["id2",102]
+			])
+
+		mp.set("id2",103) //overides the data
+		mp.set("id3",104) //new entry id3
+		console.log(mp.get("id3"));
+
+	</script>
+</body>
+</html>

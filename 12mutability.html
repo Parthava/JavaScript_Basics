@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Mutability</title>
+</head>
+<body>
+	<h2>Mutability</h2>
+	<h4>Switch console to see output</h4>
+
+	<script type="text/javascript">
+		
+		function add(num)
+		{
+			var result = num + 5;
+			console.log(result);
+		}
+
+		var x = 5;
+		add(x);
+		console.log(x);
+
+	//when we call the function add(x) we send a copy of the original data i.e. add(num=x) and get result 10
+	//but it doesn't affects the original data 'x' and next time we get result 5
+
+	//-------------------------------------------------------------------------------------
+
+		function appendfunc(arr)
+		{
+			arr.push(2);
+			console.log(arr);
+		}
+
+		var x = [4,7,9,8];
+		appendfunc(x);
+		//appendfunc(x.slice());
+		console.log(x);
+
+	//when we call the function appendfunc(x) we send the original object and push '2' we get result [4, 7, 9, 8, 2]
+	//but it affects the original array 'x' and we get [4, 7, 9, 8, 2] again
+	//note when we use appendfunc(x.slice()) now what slice() does is that it sends the copy of the array
+	//so it doesn't affect the original array
+	</script>
+</body>
+</html>

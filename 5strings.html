@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Strings</title>
+</head>
+<body>
+	<h2>String Methods and Manipulation</h2><br/>
+	Enter a text: <input type="text" name="ip" id="ip">
+	<button onclick="strman()">Submit</button>
+	<h4 id="display"></h4>
+
+	<script type="text/javascript">
+		
+		function strman()
+		{
+			var text = document.getElementById("ip").value;
+			//var casecon = text.toUpperCase();
+			var ckchar = text.trim().startsWith("@") //trim() removes white spaces
+			document.getElementById("display").innerHTML = ckchar; 
+
+		}
+
+	</script>
+</body>
+</html>

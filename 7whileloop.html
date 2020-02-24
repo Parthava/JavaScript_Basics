@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript While Loop</title>
+</head>
+<body>
+	<h2>While Loop</h2>
+	<h4>Factorial of a number</h4>
+	<h4 id="display"></h4>
+	<h4 id="display2"></h4>
+	<script type="text/javascript">
+		
+		var num = 4,f = 1,i=0;
+		var datas = ["hello", 4, 5.5, "bob"];
+
+		while(num>0)
+		{
+			f=f*num;
+			num--;
+		}
+
+		document.getElementById("display").innerHTML = "factorial of 4 is " + f; 
+
+		//------------------------------------------------------------------------------
+
+		while(i<datas.length)
+		{
+			//document.getElementById("display2").innerHTML = datas[i]; doesn't work this way
+			console.log(datas[i]);
+			i++; 
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript sets</title>
+</head>
+<body>
+	<h2>Sets</h2>
+	<h4>Switch console to see output</h4>
+	<script type="text/javascript">
+		
+		var _set = new Set();
+		_set.add(2).add(4).add(7).add(2);
+		console.log(_set); //output Set(3) {2, 4, 7}
+		//console.log(_set.has(8)); //returns true. checks if 8 is present in the _set
+		//console.log(_set.size); //prints size of the _set
+		//console.log(_set.delete(4)); //returns true. checks if 4 is present in the _set and deletes it
+
+		//iteration
+		for(var data of _set.values())
+		{
+			console.log(data);
+		} 
+	</script>
+</body>
+</html>

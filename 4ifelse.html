@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript if else</title>
+</head>
+<body>
+	<h2>Enter your age to check</h2>
+	Age: <input type="text" name="age" id="age">
+	<button onclick="ckage()">Submit</button>
+	<h4 id="yourage"></h4>
+
+	<script type="text/javascript">
+		function ckage()
+		{
+			var ipage = parseInt(document.getElementById("age").value)
+			if(ipage >= 18)
+			{
+				document.getElementById("yourage").innerHTML = "You are eligible to vote"; 
+			}
+			else
+			{
+				document.getElementById("yourage").innerHTML = "You are not eligible to vote"; 
+			}
+		}
+	</script>
+</body>
+</html>
